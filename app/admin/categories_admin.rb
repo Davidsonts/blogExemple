@@ -1,6 +1,6 @@
 Trestle.resource(:categories) do
   menu do
-    item :categories, icon: "fa fa-star"
+    item :categories, icon: "fa fa-check-square"
   end
 
   # Customize the table columns shown on the index view.
