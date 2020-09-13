@@ -32,6 +32,22 @@ Trestle.resource(:users) do
   # params do |params|
   #   params.require(:user).permit(:name, ...)
   # end
+  
+  table do
+    column :avatar, header: false do |administrator|
+      avatar_for(administrator)
+    end
+    column :email, link: true
+    column :name
+    column :kind
+    column :state
+    # column :first_name
+    # column :last_name
+    actions do |a|
+      a.delete unless a.instance == current_user
+    end
+  end
+
   form do |administrator|
     text_field :email
     text_field :name    

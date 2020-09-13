@@ -33,12 +33,22 @@ Trestle.resource(:posts) do
   #   params.require(:post).permit(:name, ...)
   # end
 
+  table do
+    column :title
+    # column :body
+    column :data, align: :center
+    column :state, align: :center
+    column :user, align: :center
+    column :category, align: :center
+    actions
+  end
+
   form do |post|
     text_field :title
     editor :body
     date_field :data
     select :state, [:active, :inactive]
-    select :user, User.all
-    select :category, Category.all
+    select :user_id, User.all
+    select :category_id, Category.all
   end
 end

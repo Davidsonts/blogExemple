@@ -32,4 +32,13 @@ Trestle.resource(:categories) do
   # params do |params|
   #   params.require(:category).permit(:name, ...)
   # end
+  
+  table do
+    column :name
+    actions
+  end
+
+  form do |category|
+    text_field :name
+  end
 end
