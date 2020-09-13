@@ -135,7 +135,7 @@ Trestle.configure do |config|
   # Specify the scope for valid admin users.
   # Defaults to config.auth.user_class (unscoped).
   #
-  # config.auth.user_scope = -> { User.where(admin: true) }
+  config.auth.user_scope = -> { User.where(kind: :manager) }
 
   # Specify the Trestle admin for managing administrator users.
   #
