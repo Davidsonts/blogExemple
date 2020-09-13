@@ -37,7 +37,9 @@ Trestle.resource(:posts) do
     column :title
     # column :body
     column :data, align: :center
-    column :state, align: :center
+    column :state, align: :center do |post|
+      status_tag(icon("fa fa-check"), :active) if post.state?
+    end
     column :user, align: :center
     column :category, align: :center
     actions
