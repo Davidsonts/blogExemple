@@ -21,19 +21,19 @@ Trestle.resource(:users, model: User, scope: Auth) do
   end
 
   form do |administrator|
-    text_field :email
-    text_field :name    
-    select :kind, [:salesman, :manager]
-    select :state, [:active, :inactive]
-    
+    email_field :email, required: true
+    text_field :name, required: true  
+    select :kind, [:salesman, :manager], required: true 
+    select :state, [:active, :inactive], required: true 
+
     # row do
     #   col(sm: 6) { text_field :first_name }
     #   col(sm: 6) { text_field :last_name }
     # end
 
     row do
-      col(sm: 6) { password_field :password }
-      col(sm: 6) { password_field :password_confirmation }
+      col(sm: 6) { password_field :password, required: true }
+      col(sm: 6) { password_field :password_confirmation, required: true }
     end
   end
 end

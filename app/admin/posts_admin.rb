@@ -44,11 +44,11 @@ Trestle.resource(:posts) do
   end
 
   form do |post|
-    text_field :title
-    editor :body
-    date_field :data
-    select :state, [:active, :inactive]
-    select :user_id, User.all
-    select :category_id, Category.all
+    text_field :title, required: true 
+    editor :body, required: true 
+    date_field :data, required: true 
+    select :state, [:active, :inactive], required: true 
+    select :user_id, User.all, required: true 
+    select :category_id, Category.all, required: true 
   end
 end

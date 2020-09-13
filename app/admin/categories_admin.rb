@@ -39,6 +39,6 @@ Trestle.resource(:categories) do
   end
 
   form do |category|
-    text_field :name
+    text_field :name, required: true
   end
 end
