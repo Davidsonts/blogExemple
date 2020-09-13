@@ -32,4 +32,13 @@ Trestle.resource(:posts) do
   # params do |params|
   #   params.require(:post).permit(:name, ...)
   # end
+
+  form do |post|
+    text_field :title
+    editor :body
+    date_field :data
+    select :state, [:active, :inactive]
+    select :user, User.all
+    select :category, Category.all
+  end
 end

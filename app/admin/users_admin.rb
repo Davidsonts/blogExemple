@@ -32,4 +32,20 @@ Trestle.resource(:users) do
   # params do |params|
   #   params.require(:user).permit(:name, ...)
   # end
+  form do |administrator|
+    text_field :email
+    text_field :name    
+    select :kind, [:salesman, :manager]
+    select :state, [:active, :inactive]
+    
+    # row do
+    #   col(sm: 6) { text_field :first_name }
+    #   col(sm: 6) { text_field :last_name }
+    # end
+
+    row do
+      col(sm: 6) { password_field :password }
+      col(sm: 6) { password_field :password_confirmation }
+    end
+  end
 end
