@@ -40,8 +40,8 @@ Trestle.resource(:posts) do
     column :state, align: :center do |post|
       status_tag(icon("fa fa-check"), :active) if post.state?
     end
-    column :user, align: :center
-    column :category, align: :center
+    # column :user, align: :center
+    # column :category, align: :center
     actions
   end
 
