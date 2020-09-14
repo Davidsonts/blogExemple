@@ -1,28 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+$ bundle
 
-Things you may want to cover:
+$ rake db:create db:migrate db:seed
 
-* Ruby version
+$ rails s
+```
 
-* System dependencies
+http://127.0.0.1:3000/admin
 
-* Configuration
+email: manager@gmail.com
+password: 123456
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-![MER](mer.png)
-
-![BLOG](blog.png)
+![LOGIN](https://i.imgur.com/svLWcvy.png, "trestle")
+![DASHBOARD](https://i.imgur.com/gn6cI0m.png, "trestle")
+![POST](https://i.imgur.com/07rCGYq.png, "trestle")
